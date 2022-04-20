@@ -47,6 +47,7 @@ header ul li a:hover {
     filter: invert(1);
 }
 .content {
+    padding: 0 5%;
     flex: 1;
     display: flex;
     justify-content: space-evenly;
@@ -75,6 +76,7 @@ header ul li a:hover {
     height: 20vh;
     display: block;
     position: relative;
+    position: relative;
 }
 .clouds .img {
     height: 100%;
@@ -86,7 +88,6 @@ header ul li a:hover {
 }
 .clouds div:nth-child(1) {
     background-image: url(img/clouds1.png);
-    bottom: 20px;
     animation: anime 10s infinite linear;
 }
 .clouds div:nth-child(2) {
@@ -94,7 +95,6 @@ header ul li a:hover {
 }
 .clouds div:nth-child(3) {
     background-image: url(img/clouds3.png);
-    bottom: -34px;
     animation: anime 10s infinite linear reverse;
 }
 @keyframes anime {
