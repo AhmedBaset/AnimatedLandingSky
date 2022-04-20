@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+body {
+    font-family: 'Rancho';
+    min-height: 100vh;
+    background: url(img/sky2.png), linear-gradient(0deg, #084f8e, #083466 80%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a {
+    color: white;
+    font-size: 2rem;
+}
+header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 12px;
+}
+header ul li a {
+    color: #ccc;
+}
+header ul li a:hover {
+    color: #fff;
+}
+.icon {
+    display: none;
+}
+.icon img {
+    width: 35px;
+    filter: invert(1);
+}
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.content .part1 img {
+    width: 180px;
+    box-shadow: 0 0 50px #fff;
+    border-radius: 50%;
+}
+.part2 h2{
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+.part2 a{
+    color: #083466;
+    background-color: #fff;
+    padding: 5px 15px;
+    font-size: 1.7rem;
+    border-radius: 5px;
+}
+
+.clouds {
+    height: 20vh;
+    display: block;
+    position: relative;
+}
+.clouds .img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-repeat: repeat-x;
+}
+.clouds div:nth-child(1) {
+    background-image: url(img/clouds1.png);
+    bottom: 20px;
+    animation: anime 10s infinite linear;
+}
+.clouds div:nth-child(2) {
+    background-image: url(img/clouds2.png);
+}
+.clouds div:nth-child(3) {
+    background-image: url(img/clouds3.png);
+    bottom: -34px;
+    animation: anime 10s infinite linear reverse;
+}
+@keyframes anime {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 100%;
+    }
+}
+
+article
+{
+    background-color: #fff;
+    padding: 80px;
+}
+article h3 {
+    font-size: 3rem;
+}
+
+/* Media query */
+@media (max-width:600px) {
+    .icon {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .part1 {
+        display: none;
+    }
+    .clouds div.img {
+        animation-duration: 25s;
+    }
+}
